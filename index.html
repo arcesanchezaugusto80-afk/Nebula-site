@@ -1,35 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nebula Café ☕✨</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
-      color: white;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-    }
-    p {
-      font-size: 1.2em;
-      line-height: 1.5;
-    }
-    .highlight {
-      color: #c5a3ff;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nebula Café ☕️🌌</title>
+  <meta name="description" content="Nebula - Cafetería con recetas caseras inspiradas en las abuelas. Amor en cada taza.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>☕ Nebula Café</h1>
-  <p>Bienvenidos a <span class="highlight">Nebula</span>, una cafetería donde cada taza tiene historia.</p>
-  <p>Nuestras recetas son caseras, hechas con amor y el toque mágico de las abuelas 💜</p>
-  <p>Vení a disfrutar de una experiencia <span class="highlight">única y casera</span> 🌙✨</p>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home">Nebula</a>
+      <nav class="nav">
+        <a href="#about">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#gallery">Galería</a>
+        <a href="#contact" class="cta">Visítanos</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1>Nebula</h1>
+          <p class="tagline">Café con alma casera — recetas de abuelas y buena vibra en cada taza.</p>
+          <p class="lead">Acá cada sorbo tiene historia. Vení a probar nuestras recetas caseras, hechas con amor y tradición.</p>
+          <a href="#menu" class="btn">Ver menú ☕</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Replace with a real photo -->
+          <div class="image-placeholder">Foto del café</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="wrap">
+        <h2>Sobre Nebula</h2>
+        <p>Somos una cafetería creada para que te sientas como en casa. Nuestras recetas son caseras, y muchas vienen de las libretas de cocina de nuestras abuelas — ese secreto que se nota en el primer sorbo.</p>
+        <ul class="features">
+          <li>Recetas familiares y caseras</li>
+          <li>Granos seleccionados</li>
+          <li>Ambiente cálido y comfy</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu">
+      <div class="wrap">
+        <h2>Menú destaque</h2>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <h3>Café Nebula</h3>
+            <p>Blend especial, tostado suave. La base perfecta.</p>
+            <span class="price">$120</span>
+          </article>
+          <article class="menu-item">
+            <h3>Tostadas de la Abuela</h3>
+            <p>Pan casero con manteca y mermelada hecha aquí.</p>
+            <span class="price">$220</span>
+          </article>
+          <article class="menu-item">
+            <h3>Bizcocho Estelar</h3>
+            <p>Receta familiar, textura húmeda y sabor casero.</p>
+            <span class="price">$280</span>
+          </article>
+        </div>
+        <p class="note">Menú ejemplo — reemplazá precios y productos por los reales.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="wrap">
+        <h2>Galería</h2>
+        <div class="gallery-grid">
+          <div class="photo">Imagen 1</div>
+          <div class="photo">Imagen 2</div>
+          <div class="photo">Imagen 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Visitános</h2>
+          <p>Dirección: Calle Falsa 123, Ciudad</p>
+          <p>Horario: Lun–Dom 8:00–20:00</p>
+          <p>Tel: +54 9 11 1234 5678</p>
+          <p>Seguinos: <strong>@NebulaCafe</strong></p>
+        </div>
+        <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+          <label>
+            Nombre
+            <input type="text" name="name" required placeholder="Tu nombre">
+          </label>
+          <label>
+            Mensaje
+            <textarea name="message" rows="4" required placeholder="Escribinos..."></textarea>
+          </label>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Nebula — Café con recetas de abuelas. Hecho con amor.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
